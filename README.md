@@ -153,8 +153,8 @@ prometheus-operator-75d9b475d9-b7lvq     2/2     Running   0          28h
 ```
 ### 1.5访问页面
 ```
-grafana：http://192.168.0.77:30003/         账号密码：admin/admin
-prometheus：http://192.168.0.77:30009/           无账号密码
+grafana：http://ip:30003/         账号密码：admin/admin
+prometheus：http://ip:30009/           无账号密码
 ```
 至此，快速安装已完成。期间碰到的问题只有image拉取报错，重新打tag后即可。
 ## 2.prom-nfs 持久化安装
