@@ -1,5 +1,17 @@
 自用记录 kube-prometheus安装prometheus
+>写在前面：  
+>prometheus-operator官方地址：https://github.com/prometheus-operator/prometheus-operator  
+kube-prometheus官方地址：https://github.com/prometheus-operator/kube-prometheus  
+两个项目的关系：前者只包含了Prometheus Operator，后者既包含了Operator，又包含了Prometheus相关组件的部署及常用的Prometheus自定义监控，具体包含下面的组件  
+The Prometheus Operator：创建CRD自定义的资源对象  
+Highly available Prometheus：创建高可用的Prometheus  
+Highly available Alertmanager：创建高可用的告警组件  
+Prometheus node-exporter：创建主机的监控组件  
+Prometheus Adapter for Kubernetes Metrics APIs：创建自定义监控的指标工具（例如可以通过nginx的request来进行应用的自动伸缩）  
+kube-state-metrics：监控k8s相关资源对象的状态指标  
+Grafana：进行图像展示  
 
+正文开始
 - prom是快速安装版，供快速体验Prometheus。不含持久化数据，不保存监控数据
 - prom-nfs是动态PV持久化安装
 > - 安装前注意使用的k8s系统版本，本次试验版本为1.21.0。生产版本可能<=1.18。k8s版本不一致可能出现异常。本文[主要参考](https://www.mairoot.com/?p=3168 "主要参考")，怀疑原作者的版本是1.20以下，因为安装后期出现了问题。
@@ -213,3 +225,4 @@ total 0
 drwxrwxrwx 5 root root 61 Aug 26 14:22 monitoring-grafana-pvc-pvc-978703ea-c0ea-4978-94e6-d0f8d3e72e66
 drwxrwxrwx 3 root root 27 Aug 26 10:50 monitoring-prometheus-k8s-db-prometheus-k8s-0-pvc-b07ab296-e697-4e32-b1cd-47060c8b5c50
 ```
+以上
