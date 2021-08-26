@@ -177,8 +177,8 @@ apiVersion: v1
     - --feature-gates=RemoveSelfLink=false # 添加这个配置
 ```
 修改后无需重启apiservice，apiservice不存在重启，可以重启的有kubelet。  
-另外，PV和PVC有自己的规则，比如PVC<=PV的大小，超过会报错。更多细节需查阅文档。
-###2.3 查看状态
+另外，PV和PVC有自己的规则，比如PVC<=PV的大小，超过会报错。更多细节需查阅文档。  
+### 2.3 查看状态
 ```
 [root@k8s-master prom]# kubectl get pvc -n monitoring
 NAME                                 STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   AGE
