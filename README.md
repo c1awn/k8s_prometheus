@@ -165,7 +165,7 @@ Export list for 192.168.15.130:
 cd prom-nfs
 $ kubectl apply -f nfs/
 $ kubectl apply -f prometheus/prometheus-prometheus.yaml
-$ kubectl apply -f grafana和/grafana-deployment.yaml 
+$ kubectl apply -f grafana/grafana-deployment.yaml 
 ```
 这一步遇到异常是grafana和prometheus的pod一直是pending，describe显示has unbound immediate PersistentVolumeClaims，进一步describe pvc，显示waiting for a volume to be created, either by external provisioner。搜索得到的[办法](https://kuboard.cn/install/faq/selfLink.html "办法")是
 ```
