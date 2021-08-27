@@ -219,10 +219,11 @@ prometheus-adapter-5b8db7955f-kx4zb      1/1     Running   0          29h
 prometheus-k8s-0                         2/2     Running   0          22h
 prometheus-operator-75d9b475d9-b7lvq     2/2     Running   0          29h
 ```
-````
+
+```
 [root@k8s-master prom]# ls /data/apps/nfs/pub/ -lh  自动生成的持久文件，格式按照：[命名空间-服务名-pvc-随机码]组成
 total 0
 drwxrwxrwx 5 root root 61 Aug 26 14:22 monitoring-grafana-pvc-pvc-978703ea-c0ea-4978-94e6-d0f8d3e72e66
 drwxrwxrwx 3 root root 27 Aug 26 10:50 monitoring-prometheus-k8s-db-prometheus-k8s-0-pvc-b07ab296-e697-4e32-b1cd-47060c8b5c50
-```
+```  
 以上
